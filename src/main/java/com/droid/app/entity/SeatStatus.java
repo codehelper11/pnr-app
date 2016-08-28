@@ -8,6 +8,7 @@ public class SeatStatus {
     private String bookingStatus;
     private String currentStatus;
 
+
     public SeatStatus(String bookingStatus, String currentStatus) {
         this.bookingStatus = bookingStatus;
         this.currentStatus = currentStatus;
@@ -19,5 +20,13 @@ public class SeatStatus {
 
     public String getCurrentStatus() {
         return currentStatus;
+    }
+
+    @Override
+    public String toString() {
+        return "SeatStatus{" +
+                "bookingStatus='" + bookingStatus + '\'' +
+                ", currentStatus='" + currentStatus + '\'' +
+                '}';
     }
 }

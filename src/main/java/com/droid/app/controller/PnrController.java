@@ -1,6 +1,7 @@
 package com.droid.app.controller;
 
 import com.droid.app.entity.Greeting;
+import com.droid.app.entity.PnrStatus;
 import com.droid.app.service.PnrService;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -19,9 +20,9 @@ public class PnrController {
     }
 
     @RequestMapping("/hello")
-    public Greeting test(){
+    public PnrStatus test(){
 
-        return new Greeting(1,pnrService.getPnrStatus("8750135595"));
+        return pnrService.getPnrStatus("8750135595");
 
     }
 }

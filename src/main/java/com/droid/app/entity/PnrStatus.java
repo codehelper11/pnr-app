@@ -11,6 +11,7 @@ public class PnrStatus {
     private List<SeatStatus> seatStatuses;
     private TrainDetails trainDetails;
 
+
     public PnrStatus(String pnrNumber, List<SeatStatus> seatStatuses, TrainDetails trainDetails) {
         this.pnrNumber = pnrNumber;
         this.seatStatuses = seatStatuses;
@@ -27,5 +28,14 @@ public class PnrStatus {
 
     public TrainDetails getTrainDetails() {
         return trainDetails;
+    }
+
+    @Override
+    public String toString() {
+        return "PnrStatus{" +
+                "pnrNumber='" + pnrNumber + '\'' +
+                ", seatStatuses=" + seatStatuses +
+                ", trainDetails=" + trainDetails +
+                '}';
     }
 }

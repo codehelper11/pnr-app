@@ -14,6 +14,8 @@ public class TrainDetails {
     private String boardingStation;
     private String seatType;
 
+
+
     private TrainDetails(String number, String name, String boardingDate, String fromStation, String toStation, String reservedUpto, String boardingStation, String seatType) {
         this.number = number;
         this.name = name;
@@ -25,7 +27,57 @@ public class TrainDetails {
         this.seatType = seatType;
     }
 
-    class TrainDetailsBuilder {
+    public static TrainDetailsBuilder getBuilder(){
+        return new TrainDetailsBuilder();
+    }
+
+    public String getNumber() {
+        return number;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getBoardingDate() {
+        return boardingDate;
+    }
+
+    public String getFromStation() {
+        return fromStation;
+    }
+
+    public String getToStation() {
+        return toStation;
+    }
+
+    public String getReservedUpto() {
+        return reservedUpto;
+    }
+
+    public String getBoardingStation() {
+        return boardingStation;
+    }
+
+    public String getSeatType() {
+        return seatType;
+    }
+
+    @Override
+    public String toString() {
+        return "TrainDetails{" +
+                "number='" + number + '\'' +
+                ", name='" + name + '\'' +
+                ", boardingDate='" + boardingDate + '\'' +
+                ", fromStation='" + fromStation + '\'' +
+                ", toStation='" + toStation + '\'' +
+                ", reservedUpto='" + reservedUpto + '\'' +
+                ", boardingStation='" + boardingStation + '\'' +
+                ", seatType='" + seatType + '\'' +
+                '}';
+    }
+
+    public static class TrainDetailsBuilder {
         private String number;
         private String name;
         private String boardingDate;
@@ -74,7 +126,7 @@ public class TrainDetails {
             return this;
         }
 
-        public TrainDetails getTrainDetails(){
+        public TrainDetails createTrainDetails(){
             return new TrainDetails(number,name,boardingDate,fromStation,toStation,reservedUpto,boardingStation,seatType);
         }
 
