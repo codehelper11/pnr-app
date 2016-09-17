@@ -9,12 +9,10 @@ repositories {
     mavenCentral()
 }
 
-ext['tomcat.version'] = '7.0.59'
-
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web:1.4.0.RELEASE")
     compile("org.jsoup:jsoup:1.9.2")
-    compile group:'org.apache.tomcat', name:'tomcat-juli', version:property('tomcat.version')
+    providedRuntime("org.springframework.boot:spring-boot-starter-tomcat:1.4.0.RELEASE")
     testCompile group: 'junit', name: 'junit', version: '4.11'
 }
 
