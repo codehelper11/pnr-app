@@ -1,0 +1,27 @@
+custom:
+    rest:
+        connection:
+            connect-timeout: 15000
+            connection-request-timeout: 15000
+            read-timeout: 15000
+irctc:
+    mandatory:
+        header:
+            first:
+                name: lccp_cap_value
+                value: 24357
+    mandtory:
+        header:
+            second:
+                name: lccp_capinp_value
+                value: 24357
+    pnr:
+        enquiry:
+            url: http://www.indianrail.gov.in/cgi_bin/inet_pnstat_cgi_8238.cgi
+    referer:
+        header:
+            value: http://www.indianrail.gov.in/pnr_Enq.html
+pnr:
+    number:
+        element:
+            name: lccp_pnrno1
